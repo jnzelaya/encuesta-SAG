@@ -1,0 +1,42 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		  	<a class="navbar-brand" routerLink="/menu" href="#">Encuestas SAG</a>
+		</div>
+		<ul  id="navbar" class="nav navbar-nav">
+		   	<li class="pull-right"><a href="../../server/cerrar_sesion.php">Cerrar Sesión</a></li>
+		      	<!--<li><a href="#" style="color: white;"><?php echo $_SESSION['nombreUsuario']; ?></a></li>-->
+		 </ul>
+	</div>
+</nav>
+	
+<div class="container" style="margin-top:100px;">
+	<div class="row" style="height:">
+		
+		<div class="col-12 col-sm-10 col-md-8 col-lg-4 col-xl-4" style="text-align: center">
+			<a routerLink = "/reporte_municipio">
+			<img src="../../assets/img/reporte.jpg" height="60%" width="60%">
+			<br>
+			Reporte Municipio por Zonas</a>
+		</div>
+		
+		<div class="col-12 col-sm-10 col-md-8 col-lg-4 col-xl-4" style="text-align: center">
+			<a routerLink = "/reporte_llamadas" href="">
+				<img src="../../assets/img/reporte.jpg" height="60%" width="60%">
+				<br>
+				Reporte Llamadas
+			</a>
+		</div>
+
+		<div class="col-12 col-sm-10 col-md-8 col-lg-4 col-xl-4" style="text-align: center">
+		<a routerLink = "/reporte">
+			<img src="../../assets/img/reporte.png" height="60%" width="60%">
+			<br>
+			Generacion de Mjs
+			</a>
+		</div>		
+	</div>	
+</div>
+<div class="text-center mt-5">
+      		SAG InfoAgro
+</div>	

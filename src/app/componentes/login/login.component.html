@@ -1,0 +1,34 @@
+<div style="text-align:center">
+  <h1>
+    Bienvenido al {{ title }}!
+  </h1>  
+</div>
+
+<div class="container" id="contenedor_central">
+    <div class="card card-container" [ngStyle] = "{'background': '#eee'}">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" >
+            <span id="reauth-email" class="reauth-email"></span>
+            <input [(ngModel)] = "correo" type="email" id="usuario" name="email" class="form-control" placeholder="Correo Electrónico"  required autofocus> 
+            <input [(ngModel)] = "pass" type="password" id="contraseña" class="form-control" placeholder="Contraseña" required>
+            <button routerLink="/menu"  id="inicio_sesion" class="btn btn-lg btn-primary btn-block btn-signin" type="button">Iniciar Sesión</button>
+        </form>
+        <a href="#" class="forgot-password">
+            ¿Olvido su contraseña?
+        </a>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#inicio_sesion").click(function() {
+				var usuario = $('#usuario').val();
+    		var contrasenia = $('#contraseña').val();
+    		$.post( "server/login.php", { usuario: usuario, contrasenia: contrasenia }, function( data ) {
+  				var informacion = JSON.parse(data);
+  				window.location.href = informacion['enlace'];
+			});
+		});
+	});
+</script>

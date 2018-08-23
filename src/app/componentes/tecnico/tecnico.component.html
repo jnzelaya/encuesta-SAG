@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+		      	<a class="navbar-brand" href="#">Encuestas SAG</a>
+		    </div>
+		    <ul  id="navbar" class="nav navbar-nav">
+		      	<li class="active"><a href="#">Inicio</a></li>
+		      	<li class="pull-right"><a href="../../server/cerrar_sesion.php">Cerrar Sesión</a></li>
+		      	<li><a href="#"></a></li>
+		      	<li><a href="#" style="color: white;"><?php echo $_SESSION['nombreUsuario']; ?></a></li>
+		    </ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row" style="height: 60%">
+		<div class="col-md-4" style="text-align: center">
+			<a href="tecnico_productores.php">
+			<img src="../../img/cacao.png" height="60%" width="60%">
+			<br>
+			Productores</a>
+		</div>
+		<div class="col-md-4" style="text-align: center">
+			<a href="#">
+				<img src="../../img/telefono.png" height="60%" width="60%">
+				<br>
+				Encuestas
+			</a>
+		</div>
+		<div class="col-md-4" style="text-align: center">
+			<a href="../../Reportes/reportes.php">
+				<img src="../../img/reportes.png" height="60%" width="60%">
+				<br>
+				Reportes
+			</a>
+		</div>
+	</div>
+	<div class="row" style="text-align: center;">
+		<div class="col-md-12">SAG InfoAgro</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
